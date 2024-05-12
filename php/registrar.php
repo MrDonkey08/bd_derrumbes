@@ -7,65 +7,40 @@ $tel = $_POST["telefono"];
 $correo = $_POST["e-mail"];
 
 $calle = $_POST["calle"];
-$num_ext = $_POST["num_ext"];
+$num_ext = (int)$_POST["num-ext"];
 $col = $_POST["colonia"];
 
 $descripcion = $_POST["descripcion"];
 $tipo_dano = $_POST["tipo-de-dano"];
 
-function completar_campos() {
-    echo '<script>
-            alert("Por favor, completa todos los campos obligatorios");
-            window.history.go(-1);
-        </script>';
-    mysqli_close($conexion);
-    exit;
-}
 
-// Ejecutar consulta
-function consulta($conexion, $insertar) {
-	$resultado = mysqli_query($conexion, $insertar);
-
-	if (!$resultado) {
-		echo '<script>
-				alert("Error de registro");
-				window.history.go(-1);
-			</script>';
-	} else {
-		echo '<script>
-				alert("Registro efectuado");
-				window.history.go(-1);
-			</script>';
-	}
-}
-
-// Validar datos
-
-if (empty($nombre) || empty($apellido) || empty($tel) || empty($correo) || empty($calle) || empty($num_ext) || empty($col) || empty($descripcion) || empty($tipo_dano)) {
-	completar_campos();
+function consulta($conexion, $query) {
+	echo("Fuck");
+    if (!mysqli_query($conexion, $query)) {
+        echo '<script>
+                alert("Error de registro");
+                window.history.go(-1);
+            </script>';
+    }
+	echo(" you");
 }
 
 // Insertar campos
+$insertar_contacto = "INSERT INTO Contacto (Nombre, Apellido, Telefono, Correo) VALUES ('$nombre', '$apellido', '$tel', '$correo')";
+consulta($conexion, $insertar_contacto);
+$id_contacto = mysqli_insert_id($conexion);
 
-$insertar = "INSERT INTO Contacto (Nombre, Telefono) VALUES
-	('$nombre', '$telefono')";
+$insertar_direccion = "INSERT INTO Direccion (Calle, Numero_exterior, Colonia) VALUES ('$calle', '$num_ext', '$col')";
+consulta($conexion, $insertar_direccion);
+$id_direccion = mysqli_insert_id($conexion);
 
-consulta($insertar);
-
-$insertar = "INSERT INTO Direccion (Calle, Numero_exterior, Colonia, Tipo_de_Residencia)
-	VALUES
-	('$calle', '$num_ext')";
-
-consulta($insertar);
-
-$insertar = "INSERT INTO Derrumbe (Descripcion, Tipo_de_Dano) VALUES
-	('$descripcion', '$tipo_dano')";
-
-consulta($insertar);
-
-// Cerrar conexión
+$insertar_derrumbe = "INSERT INTO Derrumbe (Descripcion, Tipo_de_Dano, ID_Contacto, ID_Direccion) VALUES ('$descripcion', '$tipo_dano', '$id_contacto', '$id_direccion')";
+consulta($conexion, $insertar_derrumbe);
 
 mysqli_close($conexion);
-exit;
 
+echo '<script>
+		alert("Registro efectuado");
+		window.history.go(-1);
+	</script>';
 ?>

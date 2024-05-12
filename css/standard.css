@@ -15,7 +15,7 @@ html {
 
 body {
 	font-size: 1rem;
-	background-color: #e8e5f0;
+	background-color: #FFE6E6; /*color de fondo*/
 }
 
 .mi-titulo {
@@ -23,7 +23,7 @@ body {
 }
 
 h1 {
-	color: #DC3535
+	color: #720455 /*color titulo principal*/
 }
 
 h1 span {
@@ -49,7 +49,7 @@ button, .res {
 	margin-top: 20px;
 	height: 45px;
 	padding: 0 35px;
-	background-color: #5B0888;
+	background-color: #5B0888; /*color del boton de formulario*/
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.50);
 }
 
@@ -59,10 +59,10 @@ button:hover {
 
 fieldset, .campos-fondo {
 	padding: 50px 5vw;
-	color: white;
-	border: #11437c solid 2px;
+	color: white; /*color de la letra del formulario*/
+	border: #3C0753 solid 2px; /*color del marco del formulario*/
 	border-radius: 1.5em;
-	background-color: #3d60aa;
+	background-color: #720455; /*color de formulario*/
 }
 
 fieldset button {
@@ -71,8 +71,8 @@ fieldset button {
 
 legend {
 	text-align: right;
-	background-color: black;
-	color: white;
+	background-color: black; /*color de fondo del recuadro de leyenda en el formulario*/
+	color: white; /*color de la letra del recuadro de leyenda*/
 	font-weight: 300;
 	padding: 0.75rem 1.5rem;
 	text-transform: uppercase;
@@ -81,12 +81,12 @@ legend {
 table {
 	border-collapse: collapse;
 	width: 100%;
-	background-color: #5a75c0;
+	background-color: #3C0753;
 	color: #e9e9e9;
 }
 
 td, th {
-	border: 1px solid #dddddd;
+	border: 1px solid #3C0753;
 	text-align: left;
 	padding: 8px;
 }
@@ -98,7 +98,7 @@ tr:hover, tr:nth-child(even):hover, .tbl-title:hover {
 
 tr:nth-child(odd):hover {
 	color: white;
-	background-color: #616891;
+	background-color: #3C0753;
 }
 
 tr:nth-child(even) {
@@ -107,23 +107,23 @@ tr:nth-child(even) {
 }
 
 .tbl-title {
-	background-color: #365eca;
+	background-color: #3C0753;
 }
 
 .bloque {
-	color: #181616;
+	color: #3C0753;
 	margin: 40px 10%;
-	border: #11337c solid 2px;
+	border: #720455 solid 2px;
 	border-radius: 1.2em;
 	padding: 20px 40px 30px;
-	background-color: #979dd8;
+	background-color: #EAD8C0;
 }
 
 .bloque .icon {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #11337c;
+	background-color: #720455;
 }
 
 .icon-service {
@@ -141,7 +141,7 @@ tr:nth-child(even) {
 	width: 150px;
 	height: 150px;
 	padding: 25px;
-	background-color: #11337c;
+	background-color: #3C0753;
 }
 
 .fila {

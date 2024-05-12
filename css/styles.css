@@ -1,16 +1,16 @@
 h2 {
-	color: #0a2368;
+	color: #3C0753;
 }
 
 h3 {
-	color: #11337c;
+	color: #3C0753;
 }
 
 #main-menu {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background-color: #5B0888;
+	background-color: #3C0753;
 	color: white;
 }
 
@@ -44,10 +44,10 @@ h3 {
 
 #fondo {
 	color: white;
-	background-image: url(../img/lentes.jpg), url(https://www.xtrafondos.com/wallpapers/programacion-computadora-y-lentes-10837.jpg);
+	background-image: url(../img/plan-de-emergencia.webp), url(https://twind.io/co/wp-content/uploads/2023/07/Plan-de-emergencia.webp);
 	background-size: cover;
 	height: auto;
-	background-position-y: center;
+	background-position-y:center;
 }
 
 #datos, #ubicacion, .servicio {

@@ -22,12 +22,12 @@
 
 		<section id="fondo">
 			<div id="datos">
-				<h2>Ingrese los datos que pidan</h2>
+				<h2>Registro de Derrumbes y Colaboradores</h2>
 			</div>
 		</section>
 
 		<section id="servicios-tarjeta" class="bloque">
-			<h2>Datos necesarios</h2>
+			<h2>Registro de Derrumbes</h2>
 			<section id="servicios"></section>
 
 			<section id="contacto">
@@ -36,6 +36,7 @@
 						<fieldset>
 							<legend>Es obligatorio llenar todos los campos</legend>
 							<div id="campos">
+								<h3>Datos Personales</h3>
 								<div class="campos-2">
 									<div class="campo" id="nombre">
 										<label for="nombre-input">Nombre:</label>
@@ -58,21 +59,111 @@
 									<input required type="email" id="e-mail-input" name="e-mail" placeholder="tu@correo.com" />
 								</div>
 
-								<div class="campo" id="calle">
-									<label for="calle-input">Calle:</label>
-									<input required type="text" id="calle-input" name="calle" placeholder="Domicilio" />
+								<h3>Domicilio</h3>
+								<div class="campos-2">
+									<div class="campo" id="calle">
+										<label for="calle-input">Calle:</label>
+										<input required type="text" id="calle-input" name="calle" placeholder="Domicilio" />
+									</div>
+
+									<div class="campo" id="num-ext">
+										<label for="num-ext-input">Numero exterior:</label>
+										<input required type="number" id="num-ext-input" name="num-ext" placeholder="1234" />
+									</div>
+
+									<div class="campo" id="colonia">
+										<label for="colonia-input">Colonia:</label>
+										<input required type="text" id="colonia-input" name="colonia" placeholder="Colonia" />
+									</div>
 								</div>
 
-								<div class="campo" id="num-ext">
-									<label for="num-ext-input">Numero exterior:</label>
-									<input required type="text" id="num-ext-input" name="num-ext" placeholder="1234" />
+								<div class="campos">
+									<div class="campo" id="municipio">
+										<label for="municipio-input">Municipio:</label>
+										<input required type="text" id="municipio-input" name="municipio" placeholder="Municipio" />
+									</div>
+
+									<div class="campo" id="estado">
+										<label for="estado-input">Estado:</label>
+										<input required type="text" id="estado-input" name="estado" placeholder="Estado" />
+									</div>
 								</div>
 
-								<div class="campo" id="colonia">
-									<label for="colonia-input">Colonia:</label>
-									<input required type="text" id="colonia-input" name="colonia" placeholder="Colonia" />
+								<h3>Datos Personales</h3>
+								<div class="campo" id="tipo-de-dano">
+									<label for="tipo-de-dano-input">Tipo de daño:</label>
+									<input required type="text" id="tipo-de-dano-input" name="tipo-de-dano" placeholder="Tipo de Daño del Derrumbe" />
 								</div>
 
+								<div class="campo" id="descripcion">
+									<label for="descripcion-input">Descripcion</label>
+									<textarea required id="descripcion-input" name="descripcion" placeholder="Descripción del Derrumbe"></textarea>
+								</div>
+							</div>
+							<button type="submit">Enviar</button>
+						</fieldset>
+					</form>
+				</div>
+				<div>
+					<h2>Registro de Rescatistas</h2>
+					<form method="post" action="./php/registrar.php">
+						<fieldset>
+							<legend>Es obligatorio llenar todos los campos</legend>
+							<div id="campos">
+								<h3>Datos Personales</h3>
+								<div class="campos-2">
+									<div class="campo" id="nombre">
+										<label for="nombre-input">Nombre:</label>
+										<input required type="text" id="nombre-input" name="nombre" placeholder="Nombre(s)" />
+									</div>
+
+									<div class="campo" id="apellido">
+										<label for="apellido-input">Apellido:</label>
+										<input required type="text" id="apellido-input" name="apellido" placeholder="Apellido(s)" />
+									</div>
+
+									<div class="campo" id="telefono">
+										<label for="telefono-input">Teléfono:</label>
+										<input required type="tel" id="telefono-input" name="telefono" placeholder="33 3333 3333" />
+									</div>
+								</div>
+
+								<div class="campo" id="e-mail">
+									<label for="e-mail-input">Correo electrónico:</label>
+									<input required type="email" id="e-mail-input" name="e-mail" placeholder="tu@correo.com" />
+								</div>
+
+								<h3>Domicilio</h3>
+								<div class="campos-2">
+									<div class="campo" id="calle">
+										<label for="calle-input">Calle:</label>
+										<input required type="text" id="calle-input" name="calle" placeholder="Domicilio" />
+									</div>
+
+									<div class="campo" id="num-ext">
+										<label for="num-ext-input">Numero exterior:</label>
+										<input required type="number" id="num-ext-input" name="num-ext" placeholder="1234" />
+									</div>
+
+									<div class="campo" id="colonia">
+										<label for="colonia-input">Colonia:</label>
+										<input required type="text" id="colonia-input" name="colonia" placeholder="Colonia" />
+									</div>
+								</div>
+
+								<div class="campos">
+									<div class="campo" id="municipio">
+										<label for="municipio-input">Municipio:</label>
+										<input required type="text" id="municipio-input" name="municipio" placeholder="Municipio" />
+									</div>
+
+									<div class="campo" id="estado">
+										<label for="estado-input">Estado:</label>
+										<input required type="text" id="estado-input" name="estado" placeholder="Estado" />
+									</div>
+								</div>
+
+								<h3>Datos Personales</h3>
 								<div class="campo" id="tipo-de-dano">
 									<label for="tipo-de-dano-input">Tipo de daño:</label>
 									<input required type="text" id="tipo-de-dano-input" name="tipo-de-dano" placeholder="Tipo de Daño del Derrumbe" />

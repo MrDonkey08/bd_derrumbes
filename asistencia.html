@@ -32,7 +32,7 @@
 
 			<section id="contacto">
 				<div>
-					<form method="post" action="./php/registrar.php">
+					<form method="post" action="./php/registrar/derrumbe.php">
 						<fieldset>
 							<legend>Es obligatorio llenar todos los campos</legend>
 							<div id="campos">
@@ -104,74 +104,33 @@
 						</fieldset>
 					</form>
 				</div>
+				<h2>Registro de Rescatistas</h2>
 				<div>
-					<h2>Registro de Rescatistas</h2>
-					<form method="post" action="./php/registrar.php">
+					<form method="post" action="./php/registrar/rescatista.php">
 						<fieldset>
 							<legend>Es obligatorio llenar todos los campos</legend>
 							<div id="campos">
 								<h3>Datos Personales</h3>
 								<div class="campos-2">
-									<div class="campo" id="nombre">
-										<label for="nombre-input">Nombre:</label>
-										<input required type="text" id="nombre-input" name="nombre" placeholder="Nombre(s)" />
+									<div class="campo" id="nombre-2">
+										<label for="nombre-2-input">Nombre:</label>
+										<input required type="text" id="nombre-2-input" name="nombre-2" placeholder="Nombre(s)" />
 									</div>
 
-									<div class="campo" id="apellido">
-										<label for="apellido-input">Apellido:</label>
-										<input required type="text" id="apellido-input" name="apellido" placeholder="Apellido(s)" />
+									<div class="campo" id="apellido-2">
+										<label for="apellido-2-input">Apellido:</label>
+										<input required type="text" id="apellido-2-input" name="apellido-2" placeholder="Apellido(s)" />
 									</div>
 
-									<div class="campo" id="telefono">
-										<label for="telefono-input">Teléfono:</label>
-										<input required type="tel" id="telefono-input" name="telefono" placeholder="33 3333 3333" />
+									<div class="campo" id="telefono-2">
+										<label for="telefono-2-input">Teléfono:</label>
+										<input required type="tel" id="telefono-2-input" name="telefono-2" placeholder="33 3333 3333" />
 									</div>
 								</div>
 
-								<div class="campo" id="e-mail">
+								<div class="campo" id="e-mail-2">
 									<label for="e-mail-input">Correo electrónico:</label>
-									<input required type="email" id="e-mail-input" name="e-mail" placeholder="tu@correo.com" />
-								</div>
-
-								<h3>Domicilio</h3>
-								<div class="campos-2">
-									<div class="campo" id="calle">
-										<label for="calle-input">Calle:</label>
-										<input required type="text" id="calle-input" name="calle" placeholder="Domicilio" />
-									</div>
-
-									<div class="campo" id="num-ext">
-										<label for="num-ext-input">Numero exterior:</label>
-										<input required type="number" id="num-ext-input" name="num-ext" placeholder="1234" />
-									</div>
-
-									<div class="campo" id="colonia">
-										<label for="colonia-input">Colonia:</label>
-										<input required type="text" id="colonia-input" name="colonia" placeholder="Colonia" />
-									</div>
-								</div>
-
-								<div class="campos">
-									<div class="campo" id="municipio">
-										<label for="municipio-input">Municipio:</label>
-										<input required type="text" id="municipio-input" name="municipio" placeholder="Municipio" />
-									</div>
-
-									<div class="campo" id="estado">
-										<label for="estado-input">Estado:</label>
-										<input required type="text" id="estado-input" name="estado" placeholder="Estado" />
-									</div>
-								</div>
-
-								<h3>Datos Personales</h3>
-								<div class="campo" id="tipo-de-dano">
-									<label for="tipo-de-dano-input">Tipo de daño:</label>
-									<input required type="text" id="tipo-de-dano-input" name="tipo-de-dano" placeholder="Tipo de Daño del Derrumbe" />
-								</div>
-
-								<div class="campo" id="descripcion">
-									<label for="descripcion-input">Descripcion</label>
-									<textarea required id="descripcion-input" name="descripcion" placeholder="Descripción del Derrumbe"></textarea>
+									<input required type="email" id="e-mail-2-input" name="e-mail-2" placeholder="tu@correo.com" />
 								</div>
 							</div>
 							<button type="submit">Enviar</button>

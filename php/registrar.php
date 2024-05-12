@@ -2,10 +2,14 @@
 include 'conexion.php';
 
 $nombre = $_POST["nombre"];
+$apellido = $_POST["apellido"];
 $tel = $_POST["telefono"];
+$correo = $_POST["e-mail"];
+
 $calle = $_POST["calle"];
 $num_ext = $_POST["num_ext"];
 $col = $_POST["colonia"];
+
 $descripcion = $_POST["descripcion"];
 $tipo_dano = $_POST["tipo-de-dano"];
 
@@ -37,7 +41,7 @@ function consulta($conexion, $insertar) {
 
 // Validar datos
 
-if (empty($nombre) || empty($tel) || empty($calle) || empty($num_ext) || empty($col) || empty($descripcion)) {
+if (empty($nombre) || empty($apellido) || empty($tel) || empty($correo) || empty($calle) || empty($num_ext) || empty($col) || empty($descripcion) || empty($tipo_dano)) {
 	completar_campos();
 }
 
@@ -55,7 +59,7 @@ $insertar = "INSERT INTO Direccion (Calle, Numero_exterior, Colonia, Tipo_de_Res
 consulta($insertar);
 
 $insertar = "INSERT INTO Derrumbe (Descripcion, Tipo_de_Dano) VALUES
-	('$descripcion', '$')";
+	('$descripcion', '$tipo_dano')";
 
 consulta($insertar);
 
